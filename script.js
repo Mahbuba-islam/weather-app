@@ -29,6 +29,7 @@ const cheackWeather = async (city) => {
     cityName.innerText = `${data.name}`
     humidity.innerText=`${data.main.humidity} %`
     windy.innerText = `${data.wind.speed} km/h`
+   weatherIcon.src = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`
   }
   catch(error){
     console.log(error)
